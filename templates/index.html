@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş & Kayıt</title>
+</head>
+<body>
+    <h1>Hoş Geldiniz!</h1>
+
+    <h2>Kayıt Ol</h2>
+    <form action="/register" method="POST">
+        Kullanıcı Adı: <input type="text" name="username" required>
+        Şifre: <input type="password" name="password" required>
+        <button type="submit">Kayıt Ol</button>
+    </form>
+
+    <h2>Giriş Yap</h2>
+    <form action="/login" method="POST">
+        Kullanıcı Adı: <input type="text" name="username" required>
+        Şifre: <input type="password" name="password" required>
+        <button type="submit">Giriş Yap</button>
+    </form>
+</body>
+</html>

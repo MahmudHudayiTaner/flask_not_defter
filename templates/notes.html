@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Not Defteri</title>
+</head>
+<body>
+    <h1>Merhaba, {{ username }}!</h1>
+    <h2>Notlarınız:</h2>
+    <ul>
+        {% for note in notes %}
+            <li>
+                {{ note[2] }} 
+                <a href="/edit_note/{{ note[0] }}">Düzenle</a>
+                <a href="/delete_note/{{ note[0] }}">Sil</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Yeni Not Ekle</h3>
+    <form action="/notes" method="POST">
+        <textarea name="content" required></textarea>
+        <button type="submit">Ekle</button>
+    </form>
+
+    <br>
+    <a href="/logout">Çıkış Yap</a>
+</body>
+</html>
